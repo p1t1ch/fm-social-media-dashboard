@@ -26,7 +26,7 @@ function OverviewCard({ children, type, name, link, trends, className = '', ...p
         rel="nofollow noopener noreferrer"
         className="grid grid-cols-2 gap-y-6 items-end p-6"
       >
-        <div className="text-light-blue-grayish-dark dark:text-dark-blue-desaturated text-sm font-bold">{name}</div>
+        <h3 className="text-light-blue-grayish-dark dark:text-dark-blue-desaturated text-sm font-bold">{name}</h3>
         <div className="justify-self-end">
           {type === 'facebook' && <IconFacebook title="facebook" />}
           {type === 'twitter' && <IconTwitter title="twitter" />}

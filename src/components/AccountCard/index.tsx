@@ -33,7 +33,7 @@ function AccountCard({ children, type, name, link, trends, className = '', ...pr
           }`}
         />
         <div className="p-6 pt-7 text-center">
-          <div className="flex justify-center items-center mb-7">
+          <h3 className="flex justify-center items-center mb-7">
             {type === 'facebook' && <IconFacebook title="facebook" />}
             {type === 'twitter' && <IconTwitter title="twitter" />}
             {type === 'instagram' && <IconInstagram title="instagram" />}
@@ -41,7 +41,7 @@ function AccountCard({ children, type, name, link, trends, className = '', ...pr
             <span className="text-light-blue-grayish-dark dark:text-dark-blue-desaturated text-xs font-bold ml-2">
               {name}
             </span>
-          </div>
+          </h3>
           <div className="font-bold text-light-blue-dark dark:text-white text-large tracking-tight mb-1">
             {children}
           </div>

@@ -13,14 +13,16 @@ function IndexPage() {
   return (
     <div className="min-h-screen">
       <Seo title="Frontend Mentor: Social media dashboard with theme switcher" />
-      <header className="grid place-items-center pt-9 px-6 pb-header-mobile sm:pb-header bg-light-blue-pale">
+      <header className="grid place-items-center pt-9 px-6 pb-header-mobile sm:pb-header bg-light-blue-pale dark:bg-dark-blue-dark">
         <div className="w-full max-w-container flex justify-between flex-col sm:flex-row">
-          <div className="pb-6 sm:pb-0 mb-4 sm:mb-0 border-b border-light-gray sm:border-none">
-            <h1 className="font-bold text-2xl sm:text-heading text-light-blue-dark mb-1">Social Media Dashboard</h1>
-            <div className="font-bold text-sm text-light-blue-grayish-dark">Total Followers: 23,004</div>
+          <div className="pb-6 sm:pb-0 mb-4 sm:mb-0 border-b border-light-gray dark:border-dark-gray sm:border-none">
+            <h1 className="font-bold text-2xl sm:text-heading text-light-blue-dark dark:text-white mb-1">
+              Social Media Dashboard
+            </h1>
+            <div className="dark:text-dark-blue-desaturated font-bold text-sm">Total Followers: 23,004</div>
           </div>
           <div className="flex items-center justify-between sm:justify-start">
-            <label htmlFor="dark-mode" className="font-bold text-sm text-gray mr-3">
+            <label htmlFor="dark-mode" className="dark:text-white font-bold text-sm text-gray mr-3">
               Dark Mode
             </label>
             <Toggle checked={darkTheme} icons={false} id="dark-mode" onChange={() => setDarkTheme(!darkTheme)} />
@@ -47,30 +49,30 @@ function IndexPage() {
             </Grid>
           </section>
           <section>
-            <h2 className="text-light-blue-grayish-dark font-bold text-2xl mb-6">Overview - Today</h2>
+            <h2 className="font-bold text-2xl mb-6">Overview - Today</h2>
             <Grid>
-              <OverviewCard type="facebook" name="Page Views" trends={3}>
+              <OverviewCard type="facebook" name="Page Views" link="https://www.facebook.com" trends={3}>
                 87
               </OverviewCard>
-              <OverviewCard type="facebook" name="Likes" trends={-2}>
+              <OverviewCard type="facebook" name="Likes" link="https://www.facebook.com" trends={-2}>
                 52
               </OverviewCard>
-              <OverviewCard type="instagram" name="Likes" trends={2257}>
+              <OverviewCard type="instagram" name="Likes" link="https://www.instagram.com" trends={2257}>
                 5462
               </OverviewCard>
-              <OverviewCard type="instagram" name="Profile Views" trends={1375}>
+              <OverviewCard type="instagram" name="Profile Views" link="https://www.instagram.com" trends={1375}>
                 52k
               </OverviewCard>
-              <OverviewCard type="twitter" name="Retweets" trends={303}>
+              <OverviewCard type="twitter" name="Retweets" link="https://www.twitter.com" trends={303}>
                 117
               </OverviewCard>
-              <OverviewCard type="twitter" name="Likes" trends={553}>
+              <OverviewCard type="twitter" name="Likes" link="https://www.twitter.com" trends={553}>
                 507
               </OverviewCard>
-              <OverviewCard type="youtube" name="Likes" trends={-19}>
+              <OverviewCard type="youtube" name="Likes" link="https://www.youtube.com" trends={-19}>
                 107
               </OverviewCard>
-              <OverviewCard type="youtube" name="Total Views" trends={-12}>
+              <OverviewCard type="youtube" name="Total Views" link="https://www.youtube.com" trends={-12}>
                 1407
               </OverviewCard>
             </Grid>

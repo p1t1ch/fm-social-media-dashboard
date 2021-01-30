@@ -17,10 +17,10 @@ interface AccountCardProps extends React.HTMLProps<HTMLDivElement> {
 function AccountCard({ children, type, name, link, trends, className = '', ...props }: AccountCardProps) {
   return (
     <article
-      className={`bg-light-blue-grayish-light hover:bg-light-gray-dark focus-within:bg-light-gray-dark transition-colors rounded-card ${className}`}
+      className={`bg-light-blue-grayish-light dark:bg-dark-blue-desaturated-dark hover:bg-light-gray-dark  dark:hover:bg-dark-gray focus-within:bg-light-gray-dark dark:focus-within:bg-dark-gray transition-colors rounded-card overflow-hidden ${className}`}
       {...props}
     >
-      <a href={link} target="_blank" rel="nofollow noindex noreferrer" className="overflow-hidden">
+      <a href={link} target="_blank" rel="nofollow noindex noreferrer">
         <div
           className={`h-1 ${
             type === 'facebook'
@@ -38,10 +38,14 @@ function AccountCard({ children, type, name, link, trends, className = '', ...pr
             {type === 'twitter' && <IconTwitter title="twitter" />}
             {type === 'instagram' && <IconInstagram title="instagram" />}
             {type === 'youtube' && <IconYoutube title="youtube" />}
-            <span className="text-light-blue-grayish-dark text-xs font-bold ml-2">{name}</span>
+            <span className="text-light-blue-grayish-dark dark:text-dark-blue-desaturated text-xs font-bold ml-2">
+              {name}
+            </span>
           </div>
-          <div className="font-bold text-light-blue-dark text-large tracking-tight mb-1">{children}</div>
-          <div className="text-light-blue-grayish-dark text-xs uppercase tracking-widest mb-6">
+          <div className="font-bold text-light-blue-dark dark:text-white text-large tracking-tight mb-1">
+            {children}
+          </div>
+          <div className="text-light-blue-grayish-dark dark:text-dark-blue-desaturated text-xs uppercase tracking-widest mb-6">
             {type === 'youtube' ? 'Subscribers' : 'Followers'}
           </div>
           <div

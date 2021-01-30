@@ -10,31 +10,34 @@ interface OverviewCardProps extends React.HTMLProps<HTMLDivElement> {
   children: React.ReactNode
   type: 'facebook' | 'twitter' | 'instagram' | 'youtube'
   name: string
+  link: string
   trends: number
 }
 
-function OverviewCard({ children, type, name, trends, className = '', ...props }: OverviewCardProps) {
+function OverviewCard({ children, type, name, link, trends, className = '', ...props }: OverviewCardProps) {
   return (
     <article
-      className={`grid grid-cols-2 gap-6 items-end p-6 bg-light-blue-grayish-light rounded-card ${className}`}
+      className={`bg-light-blue-grayish-light dark:bg-dark-blue-desaturated-dark hover:bg-light-gray-dark dark:hover:bg-dark-gray  focus-within:bg-light-gray-dark dark:focus-within:bg-dark-gray transition-colors rounded-card ${className}`}
       {...props}
     >
-      <div className="text-light-blue-grayish-dark text-sm font-bold">{name}</div>
-      <div className="justify-self-end">
-        {type === 'facebook' && <IconFacebook title="facebook" />}
-        {type === 'twitter' && <IconTwitter title="twitter" />}
-        {type === 'instagram' && <IconInstagram title="instagram" />}
-        {type === 'youtube' && <IconYoutube title="youtube" />}
-      </div>
-      <div className="text-light-blue-dark text-big font-bold">{children}</div>
-      <div
-        className={`justify-self-end flex justify-center items-center text-xs font-bold ${
-          trends >= 0 ? 'text-primary-green' : 'text-primary-red'
-        }`}
-      >
-        {trends >= 0 ? <IconUp title="plus" /> : <IconDown title="down" />}{' '}
-        <span className="ml-1">{Math.abs(trends)} %</span>
-      </div>
+      <a href={link} target="_blank" rel="nofollow noindex noreferrer" className="grid grid-cols-2 gap-6 items-end p-6">
+        <div className="text-light-blue-grayish-dark dark:text-dark-blue-desaturated text-sm font-bold">{name}</div>
+        <div className="justify-self-end">
+          {type === 'facebook' && <IconFacebook title="facebook" />}
+          {type === 'twitter' && <IconTwitter title="twitter" />}
+          {type === 'instagram' && <IconInstagram title="instagram" />}
+          {type === 'youtube' && <IconYoutube title="youtube" />}
+        </div>
+        <div className="text-light-blue-dark dark:text-white text-big font-bold">{children}</div>
+        <div
+          className={`justify-self-end flex justify-center items-center text-xs font-bold ${
+            trends >= 0 ? 'text-primary-green' : 'text-primary-red'
+          }`}
+        >
+          {trends >= 0 ? <IconUp title="plus" /> : <IconDown title="down" />}{' '}
+          <span className="ml-1">{Math.abs(trends)} %</span>
+        </div>
+      </a>
     </article>
   )
 }

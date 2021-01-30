@@ -2,6 +2,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}'],
+  darkMode: 'media',
   theme: {
     colors: {
       primary: {
@@ -25,12 +26,11 @@ module.exports = {
         'gray-dark': '#E1E4F0',
       },
       dark: {
-        'toggle-start': '#40DB82',
-        'toggle-end': '#388FE7',
         'blue-dark': '#20222F',
         'blue-darkest': '#1D1F29',
         'blue-desaturated': '#8C98C6',
         'blue-desaturated-dark': '#252B42',
+        gray: '#333A55',
       },
       white: '#FFF',
     },

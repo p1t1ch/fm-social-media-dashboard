@@ -1,4 +1,8 @@
 .react-toggle:focus-within .react-toggle-track {
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.react-toggle--checked:focus-within .react-toggle-track {
   box-shadow: 0 0 0 2px #1d1f29;
 }
 
@@ -30,6 +34,7 @@
 
 .react-toggle--checked .react-toggle-thumb {
   left: 27px;
+  background-color: #333a55;
 }
 
 .react-toggle--focus .react-toggle-thumb,

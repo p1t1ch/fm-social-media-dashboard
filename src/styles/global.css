@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply text-sm bg-white text-light-blue-grayish-dark;
+    @apply text-sm bg-white dark:bg-dark-blue-darkest text-light-blue-grayish-dark dark:text-white;
   }
 
   a:focus {

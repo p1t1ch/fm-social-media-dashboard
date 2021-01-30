@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Toggle from 'react-toggle'
+import 'react-toggle/style.css'
+import '@/styles/toggle.css'
 import Seo from '@/components/Seo'
 import Grid from '@/components/Grid'
 import AccountCard from '@/components/AccountCard'
 import OverviewCard from '@/components/OverviewCard'
 
 function IndexPage() {
+  const [darkTheme, setDarkTheme] = useState(false)
+
   return (
     <div className="min-h-screen">
       <Seo title="Frontend Mentor: Social media dashboard with theme switcher" />
@@ -16,7 +21,7 @@ function IndexPage() {
           </div>
           <div className="flex items-center">
             <div className="font-bold text-sm text-gray mr-3">Dark Mode</div>
-            <button>Toggle</button>
+            <Toggle checked={darkTheme} icons={false} onChange={() => setDarkTheme(!darkTheme)} />
           </div>
         </div>
       </header>

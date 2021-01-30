@@ -22,6 +22,7 @@ module.exports = {
         'blue-grayish-light': '#F1F3FA',
         'blue-dark': '#1D1F29',
         gray: '#848BAB',
+        'gray-dark': '#E1E4F0',
       },
       dark: {
         'toggle-start': '#40DB82',

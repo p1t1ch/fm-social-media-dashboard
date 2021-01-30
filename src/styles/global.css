@@ -10,6 +10,10 @@
   body {
     @apply text-sm bg-white text-light-blue-grayish-dark;
   }
+
+  a:focus {
+    @apply outline-none;
+  }
 }
 
 @layer utilities {

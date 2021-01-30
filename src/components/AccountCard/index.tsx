@@ -16,7 +16,10 @@ interface AccountCardProps extends React.HTMLProps<HTMLDivElement> {
 
 function AccountCard({ children, type, name, link, trends, className = '', ...props }: AccountCardProps) {
   return (
-    <article className={`bg-light-blue-grayish-light rounded-card ${className}`} {...props}>
+    <article
+      className={`bg-light-blue-grayish-light hover:bg-light-gray-dark focus-within:bg-light-gray-dark transition-colors rounded-card ${className}`}
+      {...props}
+    >
       <a href={link} target="_blank" rel="nofollow noindex noreferrer" className="overflow-hidden">
         <div
           className={`h-1 ${

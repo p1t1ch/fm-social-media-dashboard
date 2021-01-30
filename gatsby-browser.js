@@ -1,4 +1,4 @@
-import 'focus-visible'
-import '@fontsource/inter/latin-400.css'
-import '@fontsource/inter/latin-700.css'
-import '@/styles/global.css'
+import React from 'react'
+import RootWrapper from '@/components/RootWrapper'
+
+export const wrapRootElement = ({ element }) => <RootWrapper>{element}</RootWrapper>

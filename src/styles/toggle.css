@@ -29,12 +29,12 @@
   width: 1.125rem;
   height: 1.125rem;
   border: none;
-  background-color: #f1f3fa;
+  background-color: #333a55;
 }
 
 .react-toggle--checked .react-toggle-thumb {
   left: 27px;
-  background-color: #333a55;
+  background-color: #f1f3fa;
 }
 
 .react-toggle--focus .react-toggle-thumb,

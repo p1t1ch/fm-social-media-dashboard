@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Toggle from 'react-toggle'
 import 'react-toggle/style.css'
 import '@/styles/toggle.css'
@@ -6,9 +6,10 @@ import Seo from '@/components/Seo'
 import Grid from '@/components/Grid'
 import AccountCard from '@/components/AccountCard'
 import OverviewCard from '@/components/OverviewCard'
+import { useColorScheme } from '@/components/ColorSchemeProvider'
 
 function IndexPage() {
-  const [darkTheme, setDarkTheme] = useState(false)
+  const [colorScheme, setColorScheme] = useColorScheme()
 
   return (
     <div className="min-h-screen">
@@ -25,7 +26,12 @@ function IndexPage() {
             <label htmlFor="dark-mode" className="dark:text-white font-bold text-sm text-gray mr-3">
               Dark Mode
             </label>
-            <Toggle checked={darkTheme} icons={false} id="dark-mode" onChange={() => setDarkTheme(!darkTheme)} />
+            <Toggle
+              checked={colorScheme === 'light'}
+              icons={false}
+              id="dark-mode"
+              onChange={() => setColorScheme(colorScheme === 'dark' ? 'light' : 'dark')}
+            />
           </div>
         </div>
       </header>

@@ -13,6 +13,6 @@
 
 For this challenge:
 
-1. Worked with Tailwind dark mode
+1. Worked with Tailwind dark mode for the first time
 1. Adapted good old dark mode solution with Locale Storage / OS Preferences support for the Tailwind
 1. Used react-toggle for the first time

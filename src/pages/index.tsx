@@ -14,18 +14,20 @@ function IndexPage() {
     <div className="min-h-screen">
       <Seo title="Frontend Mentor: Social media dashboard with theme switcher" />
       <header className="grid place-items-center pt-9 px-6 pb-header-mobile sm:pb-header bg-light-blue-pale">
-        <div className="w-full max-w-container flex justify-between">
-          <div>
-            <h1 className="font-bold text-heading text-light-blue-dark mb-1">Social Media Dashboard</h1>
+        <div className="w-full max-w-container flex justify-between flex-col sm:flex-row">
+          <div className="pb-6 sm:pb-0 mb-4 sm:mb-0 border-b border-light-gray sm:border-none">
+            <h1 className="font-bold text-2xl sm:text-heading text-light-blue-dark mb-1">Social Media Dashboard</h1>
             <div className="font-bold text-sm text-light-blue-grayish-dark">Total Followers: 23,004</div>
           </div>
-          <div className="flex items-center">
-            <div className="font-bold text-sm text-gray mr-3">Dark Mode</div>
-            <Toggle checked={darkTheme} icons={false} onChange={() => setDarkTheme(!darkTheme)} />
+          <div className="flex items-center justify-between sm:justify-start">
+            <label htmlFor="dark-mode" className="font-bold text-sm text-gray mr-3">
+              Dark Mode
+            </label>
+            <Toggle checked={darkTheme} icons={false} id="dark-mode" onChange={() => setDarkTheme(!darkTheme)} />
           </div>
         </div>
       </header>
-      <main className="grid place-items-center px-6 pb-11 transform translate-y-card">
+      <main className="grid place-items-center px-6 pb-11 transform -translate-y-11 sm:translate-y-card">
         <div className="w-full max-w-container">
           <section className="mb-12">
             <h2 className="sr-only">Your accounts</h2>

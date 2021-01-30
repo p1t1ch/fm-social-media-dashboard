@@ -6,7 +6,7 @@ interface GridProps extends React.HTMLProps<HTMLUListElement> {
 
 function Grid({ children, className = '', ...props }: GridProps) {
   return (
-    <ul className={`grid grid-cols-cards gap-8 ${className}`} {...props}>
+    <ul className={`grid grid-cols-cards gap-6 sm:gap-8 ${className}`} {...props}>
       {React.Children.map(children, child => (
         <li>{child}</li>
       ))}

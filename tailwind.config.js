@@ -50,17 +50,17 @@ module.exports = {
         card: '.3125rem',
       },
       gridTemplateColumns: {
-        cards: 'repeat(auto-fill, minmax(16rem, 1fr))',
+        cards: 'repeat(auto-fill, minmax(15rem, 1fr))',
       },
       padding: {
         header: '9.625rem',
         'header-mobile': '5.25rem',
       },
       maxWidth: {
-        container: '72.375rem',
+        container: '69.375rem',
       },
       translate: {
-        card: '-6.75rem',
+        card: '-6.875rem',
       },
     },
   },

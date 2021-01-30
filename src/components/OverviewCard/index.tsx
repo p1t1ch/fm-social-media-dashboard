@@ -20,7 +20,12 @@ function OverviewCard({ children, type, name, link, trends, className = '', ...p
       className={`bg-light-blue-grayish-light dark:bg-dark-blue-desaturated-dark hover:bg-light-gray-dark dark:hover:bg-dark-gray  focus-within:bg-light-gray-dark dark:focus-within:bg-dark-gray transition-colors rounded-card ${className}`}
       {...props}
     >
-      <a href={link} target="_blank" rel="nofollow noindex noreferrer" className="grid grid-cols-2 gap-6 items-end p-6">
+      <a
+        href={link}
+        target="_blank"
+        rel="nofollow noindex noreferrer"
+        className="grid grid-cols-2 gap-y-6 items-end p-6"
+      >
         <div className="text-light-blue-grayish-dark dark:text-dark-blue-desaturated text-sm font-bold">{name}</div>
         <div className="justify-self-end">
           {type === 'facebook' && <IconFacebook title="facebook" />}

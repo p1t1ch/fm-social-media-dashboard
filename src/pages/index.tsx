@@ -37,7 +37,7 @@ function IndexPage() {
       </header>
       <main className="grid place-items-center px-6 pb-11 transform -translate-y-11 sm:translate-y-card">
         <div className="w-full max-w-container">
-          <section className="mb-12">
+          <section className="mb-11">
             <h2 className="sr-only">Your accounts</h2>
             <Grid>
               <AccountCard type="facebook" name="@nathanf" link="https://www.facebook.com" trends={12}>

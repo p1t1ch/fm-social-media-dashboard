@@ -30,19 +30,24 @@ function AccountCard({ children, type, name, link, trends, className = '', ...pr
           }`}
         />
         <div className="p-6 pt-7 text-center">
-          <div className="mb-7">
+          <div className="flex justify-center items-center mb-7">
             {type === 'facebook' && <IconFacebook title="facebook" />}
             {type === 'twitter' && <IconTwitter title="twitter" />}
             {type === 'instagram' && <IconInstagram title="instagram" />}
             {type === 'youtube' && <IconYoutube title="youtube" />}
             <span className="text-light-blue-grayish-dark text-xs font-bold ml-2">{name}</span>
           </div>
-          <div className="text-light-blue-dark text-large tracking-tight mb-2">{children}</div>
+          <div className="font-bold text-light-blue-dark text-large tracking-tight mb-1">{children}</div>
           <div className="text-light-blue-grayish-dark text-xs uppercase tracking-widest mb-6">
             {type === 'youtube' ? 'Subscribers' : 'Followers'}
           </div>
-          <div className={`text-xs font-bold ${trends >= 0 ? 'text-primary-green' : 'text-primary-red'}`}>
-            {trends >= 0 ? <IconUp title="plus" /> : <IconDown title="down" />} {Math.abs(trends)} Today
+          <div
+            className={`flex justify-center items-center text-xs font-bold ${
+              trends >= 0 ? 'text-primary-green' : 'text-primary-red'
+            }`}
+          >
+            {trends >= 0 ? <IconUp title="plus" /> : <IconDown title="down" />}
+            <span className="ml-1">{Math.abs(trends)} Today</span>
           </div>
         </div>
       </a>

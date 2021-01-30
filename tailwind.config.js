@@ -21,6 +21,7 @@ module.exports = {
         'blue-grayish-dark': '#63687D',
         'blue-grayish-light': '#F1F3FA',
         'blue-dark': '#1D1F29',
+        gray: '#848BAB',
       },
       dark: {
         'toggle-start': '#40DB82',
@@ -41,12 +42,24 @@ module.exports = {
       },
       fontSize: {
         large: ['3.5rem', 1],
+        big: ['2rem', 1],
+        heading: ['1.75rem', 1.21],
       },
       borderRadius: {
         card: '.3125rem',
       },
       gridTemplateColumns: {
         cards: 'repeat(auto-fill, minmax(16rem, 1fr))',
+      },
+      padding: {
+        header: '9.625rem',
+        'header-mobile': '5.25rem',
+      },
+      maxWidth: {
+        container: '72.375rem',
+      },
+      translate: {
+        card: '-6.75rem',
       },
     },
   },

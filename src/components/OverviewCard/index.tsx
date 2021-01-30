@@ -15,17 +15,25 @@ interface OverviewCardProps extends React.HTMLProps<HTMLDivElement> {
 
 function OverviewCard({ children, type, name, trends, className = '', ...props }: OverviewCardProps) {
   return (
-    <article className={`${className}`} {...props}>
-      <div>{name}</div>
-      <div>
+    <article
+      className={`grid grid-cols-2 gap-6 items-end p-6 bg-light-blue-grayish-light rounded-card ${className}`}
+      {...props}
+    >
+      <div className="text-light-blue-grayish-dark text-sm font-bold">{name}</div>
+      <div className="justify-self-end">
         {type === 'facebook' && <IconFacebook title="facebook" />}
         {type === 'twitter' && <IconTwitter title="twitter" />}
         {type === 'instagram' && <IconInstagram title="instagram" />}
         {type === 'youtube' && <IconYoutube title="youtube" />}
       </div>
-      <div>{children}</div>
-      <div>
-        {trends >= 0 ? <IconUp title="plus" /> : <IconDown title="down" />} {Math.abs(trends)} %
+      <div className="text-light-blue-dark text-big font-bold">{children}</div>
+      <div
+        className={`justify-self-end flex justify-center items-center text-xs font-bold ${
+          trends >= 0 ? 'text-primary-green' : 'text-primary-red'
+        }`}
+      >
+        {trends >= 0 ? <IconUp title="plus" /> : <IconDown title="down" />}{' '}
+        <span className="ml-1">{Math.abs(trends)} %</span>
       </div>
     </article>
   )

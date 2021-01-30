@@ -6,6 +6,10 @@
   html {
     @apply scroll-behaviour-smooth;
   }
+
+  body {
+    @apply text-sm bg-white text-light-blue-grayish-dark;
+  }
 }
 
 @layer utilities {

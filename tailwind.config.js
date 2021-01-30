@@ -36,6 +36,18 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
       },
+      letterSpacing: {
+        widest: '.4em',
+      },
+      fontSize: {
+        large: ['3.5rem', 1],
+      },
+      borderRadius: {
+        card: '.3125rem',
+      },
+      gridTemplateColumns: {
+        cards: 'repeat(auto-fill, minmax(16rem, 1fr))',
+      },
     },
   },
 }

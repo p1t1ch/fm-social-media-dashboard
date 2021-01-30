@@ -16,19 +16,34 @@ interface AccountCardProps extends React.HTMLProps<HTMLDivElement> {
 
 function AccountCard({ children, type, name, link, trends, className = '', ...props }: AccountCardProps) {
   return (
-    <article className={`${className}`} {...props}>
-      <a href={link} target="_blank" rel="nofollow noindex noreferrer">
-        <div>
-          {type === 'facebook' && <IconFacebook title="facebook" />}
-          {type === 'twitter' && <IconTwitter title="twitter" />}
-          {type === 'instagram' && <IconInstagram title="instagram" />}
-          {type === 'youtube' && <IconYoutube title="youtube" />}
-          <span>{name}</span>
-        </div>
-        <div>{children}</div>
-        <div>{type === 'youtube' ? 'Subscribers' : 'Followers'}</div>
-        <div>
-          {trends >= 0 ? <IconUp title="plus" /> : <IconDown title="down" />} {Math.abs(trends)} Today
+    <article className={`bg-light-blue-grayish-light rounded-card ${className}`} {...props}>
+      <a href={link} target="_blank" rel="nofollow noindex noreferrer" className="overflow-hidden">
+        <div
+          className={`h-1 ${
+            type === 'facebook'
+              ? 'bg-socials-facebook'
+              : type === 'twitter'
+              ? 'bg-socials-twitter'
+              : type === 'youtube'
+              ? 'bg-socials-youtube'
+              : 'bg-gradient-to-bl from-socials-instagram-start to-socials-instagram-end'
+          }`}
+        />
+        <div className="p-6 pt-7 text-center">
+          <div className="mb-7">
+            {type === 'facebook' && <IconFacebook title="facebook" />}
+            {type === 'twitter' && <IconTwitter title="twitter" />}
+            {type === 'instagram' && <IconInstagram title="instagram" />}
+            {type === 'youtube' && <IconYoutube title="youtube" />}
+            <span className="text-light-blue-grayish-dark text-xs font-bold ml-2">{name}</span>
+          </div>
+          <div className="text-light-blue-dark text-large tracking-tight mb-2">{children}</div>
+          <div className="text-light-blue-grayish-dark text-xs uppercase tracking-widest mb-6">
+            {type === 'youtube' ? 'Subscribers' : 'Followers'}
+          </div>
+          <div className={`text-xs font-bold ${trends >= 0 ? 'text-primary-green' : 'text-primary-red'}`}>
+            {trends >= 0 ? <IconUp title="plus" /> : <IconDown title="down" />} {Math.abs(trends)} Today
+          </div>
         </div>
       </a>
     </article>

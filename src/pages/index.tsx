@@ -1,8 +1,7 @@
 import React from 'react'
 import Seo from '@/components/Seo'
-import Accounts from '@/components/Accounts'
+import Grid from '@/components/Grid'
 import AccountCard from '@/components/AccountCard'
-import Overview from '@/components/Overview'
 import OverviewCard from '@/components/OverviewCard'
 
 function IndexPage() {
@@ -22,7 +21,7 @@ function IndexPage() {
       <main>
         <section>
           <h2 className="sr-only">Your accounts</h2>
-          <Accounts>
+          <Grid>
             <AccountCard type="facebook" name="@nathanf" link="https://www.facebook.com" trends={12}>
               1987
             </AccountCard>
@@ -35,11 +34,11 @@ function IndexPage() {
             <AccountCard type="youtube" name="Nathan F." link="https://www.youtube.com" trends={-144}>
               8239
             </AccountCard>
-          </Accounts>
+          </Grid>
         </section>
         <section>
           <h2>Overview - Today</h2>
-          <Overview>
+          <Grid>
             <OverviewCard type="facebook" name="Page Views" trends={3}>
               87
             </OverviewCard>
@@ -64,7 +63,7 @@ function IndexPage() {
             <OverviewCard type="youtube" name="Total Views" trends={-12}>
               1407
             </OverviewCard>
-          </Overview>
+          </Grid>
         </section>
       </main>
     </div>

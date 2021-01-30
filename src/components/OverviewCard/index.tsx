@@ -23,7 +23,7 @@ function OverviewCard({ children, type, name, link, trends, className = '', ...p
       <a
         href={link}
         target="_blank"
-        rel="nofollow noindex noreferrer"
+        rel="nofollow noopener noreferrer"
         className="grid grid-cols-2 gap-y-6 items-end p-6"
       >
         <div className="text-light-blue-grayish-dark dark:text-dark-blue-desaturated text-sm font-bold">{name}</div>

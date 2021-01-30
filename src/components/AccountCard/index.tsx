@@ -20,7 +20,7 @@ function AccountCard({ children, type, name, link, trends, className = '', ...pr
       className={`bg-light-blue-grayish-light dark:bg-dark-blue-desaturated-dark hover:bg-light-gray-dark  dark:hover:bg-dark-gray focus-within:bg-light-gray-dark dark:focus-within:bg-dark-gray transition-colors rounded-card overflow-hidden ${className}`}
       {...props}
     >
-      <a href={link} target="_blank" rel="nofollow noindex noreferrer">
+      <a href={link} target="_blank" rel="nofollow noopener noreferrer">
         <div
           className={`h-1 ${
             type === 'facebook'
